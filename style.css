@@ -1,0 +1,175 @@
+*{
+    font-family: monospace;
+}
+body{
+    background-color: #bbe4e9;
+    margin: 0;
+}
+.icon{
+    width: 100px;
+    position: fixed;
+    left: 1%;
+    top: 2.5%;
+}
+.cureve-s {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding-top: 100px;
+    background: #53a8b6;
+}
+
+.curve {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    transform: translate(85%, 60%);
+    background-color: #bbe4e9;
+}
+
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #53a8b6;
+    transform: translate(-4%, 40%);
+    z-index: -1;
+}
+
+.typewriter h1 {
+    color: #fff;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #bbe4e9; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #bbe4e9 }
+  }
+  .title{
+    color: white;
+    font-size: 100px;
+  }
+  .down{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 70%;
+    font-size: 50px;
+    font-weight: 900;
+    background: black;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px black;
+    left: 45%;
+    transition: 500ms;
+  }
+  .down:hover{
+    box-shadow: 0px 0px 40px 10px black;
+    transition: 500ms;
+  }
+  .bottom {
+    position: absolute;
+    top: 150%;
+    width: 100px;
+    height: 70px;      
+    }
+  .list-s {
+    left: 25%;
+    top: 100%;
+    position: absolute;
+    width: 50%;
+    margin: auto;
+    transition: 200ms linear;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    transition: 200ms linear;
+  }
+  details[open] summary ~ * {
+    animation: open 0.3s ease-in-out;
+    transition: 200ms linear;
+  }
+  
+  @keyframes open {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  details summary::-webkit-details-marker {
+    display: none;
+    transition: 200ms linear;
+  }
+  
+  details summary {
+    width: 100%;
+    padding: 0.5rem 0;
+    border-top: 1px solid black;
+    position: relative;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 900;
+    list-style: none;
+    transition: 200ms linear;
+  }
+  
+  details summary:after {
+    content: "+";
+    color: black;
+    position: absolute;
+    font-size: 1.75rem;
+    line-height: 0;
+    margin-top: 0.75rem;
+    right: 0;
+    font-weight: 900;
+    transform-origin: center;
+    transition: 200ms linear;
+  }
+  details[open] summary:after {
+    transform: rotate(45deg);
+    font-size: 2rem;
+    transition: 200ms linear;
+  }
+  details summary {
+    outline: 0;
+    transition: 200ms linear;
+  }
+  details p {
+    font-size: 0.95rem;
+    margin: 0 0 1rem;
+    padding-top: 1rem;
+    transition: 200ms linear;
+  }
